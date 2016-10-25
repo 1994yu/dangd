@@ -1,0 +1,17 @@
+html,body,div,h1,dl,dt,dd{  margin:0px;padding:0px;  }
+h1{  color: red;  font-size: 20px;  background: lightgrey;  }
+#chang_tab{  width:550px;  margin: auto;  border:1px solid #888;  overflow: hidden;  }
+#chang_tab ul{  list-style: none;  position: relative;  left: 100px;  top: -20px;  }
+#chang_tab ul li{  float: left;  }
+.show{  color: red;  background: white;  }
+.history{  width: 60px;  height: 20px;  line-height: 20px; /*background: url("../tab/dd_book_bg1.jpg")-40px 23px;*/  }
+.home{  width: 60px;  height: 20px;  line-height: 20px; /*background: url("../tab/dd_book_bg1.jpg");*/  }
+.culture{  width: 60px;  height: 20px;  line-height: 20px; /*background: url("../tab/dd_book_bg1.jpg");*/  }
+.novel{  width: 60px;  height: 20px;  line-height: 20px; /*background: url("../tab/dd_book_bg1.jpg");*/  }
+.history1{  width:550px;  margin: auto; /*border:1px solid #888;*/  overflow: hidden;  position: relative;  top: -20px;  display: none;  line-height: 18px; }
+.history1 span{  color: red;  }
+.con{  display: block;  }
+
+.history1 dl{  width:270px;  float:left;  margin-top:10px;  }
+.history1 dl dt{  width:70px;  margin-top:20px;  float:left;  }
+.history1 dl dd{  width:190px;  float:left;  }

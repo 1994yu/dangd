@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link href="css/cartCss.css" rel="stylesheet" type="text/css" />
+    <link href="css/dd_object_head.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+        function getTotal() {
+            var cartTable = document.getElementById("cartTable");
+            var pointTotal = document.getElementById("pointTotal");
+            var saveTotal = document.getElementById("saveTotal");
+            var priceTotal = document.getElementById("priceTotal");
+            var price =0;
+            var pointS = 0;
+            var save = 0;
+            for (var i = 1; i < cartTable.rows.length; i++) {
+                var num = $("input.num:eq("+(i-1)+")").val();
+                var point = cartTable.rows[i].cells[1].innerHTML;//积分
+                var money = cartTable.rows[i].cells[2].innerHTML.substring(1);//价格
+                var dmoney = cartTable.rows[i].cells[3].innerHTML.substring(1, 6);//折扣后价格
+
+                price=price+parseFloat(dmoney)*parseFloat(num);
+                priceTotal.innerHTML=price;
+                pointS=pointS+parseFloat(point)*parseFloat(num);
+                pointTotal.innerHTML=pointS;
+                save=save+(parseFloat(money)-parseFloat(dmoney))*parseFloat(num);
+                saveTotal.innerHTML=save;
+            }
+        }
+        function deleteRow(rowId) {
+            var row = document.getElementById(rowId).rowIndex;//判断该行的当前位置
+            var bt=confirm(" 您确定删除吗？");
+            if (bt==true)
+            {
+                document.getElementById("cartTable").deleteRow(row);
+            }
+            else
+            {
+                    return false;
+            }
+        }
+        $(function(){
+            $("#menu").hide();
+            $("#menu1").click(function(){
+                $("#menu").toggle(0);
+            })
+        });
+        $(function(){
+            $("#show").hide();
+            $("#showList").click(function(){
+                $("#show").toggle(function() {
+                    $("#showList").attr("src", "images/shopping_arrow_down.gif");
+                    $("#showList").attr("img", this.src);},
+                        function() {
+                    $("#showList").attr("src", "images/shopping_arrow_up.gif");
+                    $("#showList").attr("img", this.src);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="object_head">
+    <div id="nav">
+        <div id="nav_left">
+            <p>您好！欢迎光临当当网[<a href="logoin.html">登录</a>|<a href="registerPage.html">免费注册</a>]</p>
+        </div>
+        <div id="nav_right">
+            <ul>
+                <li class="nav_right_li">帮助</li>
+                <li id="nav_right_li2">我的当当 <img src="images/dd_arrow_down.gif" alt="" id="menu1" >|
+                    <dl id="menu" style="border: 1px solid">
+                    <dt><span class="arrow"></span></dt>
+                    <dd><a href="#" style="text-decoration: none">我的订单</a></dd>
+                    <dd><a href="#" style="text-decoration: none">账户余额</a></dd>
+                    <dd><a href="#" style="text-decoration: none">购物礼券</a></dd>
+                    <dd><a href="#" style="text-decoration: none">我的会员积分</a></dd>
+                    </dl>
+                    </li>
+
+                <li class="nav_right_li">团购|</li>
+                <li class="nav_right_li">礼品卡|</li>
+                <li class="nav_right_li">个性化推荐|</li>
+                <li id="nav_right_li1"><img src="images/dd_header_shop.gif" alt=""><a href="#">&nbsp;购物车</a>|</li>
+            </ul>
+        </div>
+    </div>
+    <div id="head">
+        <div id="header1">
+            <div id="dd_tenYear"> <img src="images/dd_logo.gif" alt=""></div>
+            <div id="header1_right">
+                <ul>
+                    <li id="header1_right_li1">商店街</li>
+                    <li class="header1_right_li2">促销</li>
+                    <li class="header1_right_li3">当当<img src="images/dd_header_top.png" alt=""> </li>
+                    <li class="header1_right_li2">社区</li>
+                    <li class="header1_right_li3">在线读书</li>
+                </ul>
+            </div>
+            <div id="header1_middle">
+                <ul>
+                    <li><a href="dd_body.html">首页|</a></li>
+                    <li><a href="productionpage.html">图书|</a></li>
+                    <li>音乐|</li>
+                    <li>影视|</li>
+                    <li>运动|</li>
+                    <li>服饰|</li>
+                    <li>家居|</li>
+                    <li>美妆|</li>
+                    <li>母婴|</li>
+                    <li>食品|</li>
+                    <li id="header1_middle_last">数码家电|</li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2">
+            <ul>
+                <li>小说|</li>
+                <li>青春|</li>
+                <li>历史|</li>
+                <li>保健|</li>
+                <li>少儿|</li>
+                <li>旅游|</li>
+                <li>期刊|</li>
+                <li>图书畅游榜|</li>
+                <li>新书热卖网|</li>
+                <li>特价书|</li>
+                <li>图书促销|</li>
+                <li>所有图书分类|</li>
+            </ul>
+        </div>
+        <div id="header3">
+            <ul>
+                <li><input type="text"></li>
+                <li><img src="images/dd_header_search_btn.jpg" alt=""></li>
+                <li><img src="images/dd_arrow_right.gif" alt="">高级搜索|</li>
+                <li><img src="images/dd_header_search_top.jpg" alt="">雅思|</li>
+                <li>建造师|</li>
+                <li>中里巴人|</li>
+                <li>注会|</li>
+                <li>新概念英语|</li>
+                <li>更多>></li>
+            </ul>
+        </div>
+        <div id="banner">
+            <img src="images/dd_index_top_adver.jpg" alt="">
+        </div>
+    </div>
+</div>
+    <div id="container">
+        <div id="secondTitle">
+            <img src="images/shopping_myshopping.gif" />&nbsp;&nbsp;全场免运费活动中
+        </div>
+        <div id="display">
+                <div class="left" align="center">根据您挑选的商品，当当为您推荐</div>
+                <div class="right"><img id="showList" src="images/shopping_arrow_down.gif" style="cursor: pointer;"/></div>
+        </div>
+        <div id="show">
+
+            <div id="table1">
+                <table>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·JavaScript DOM编程艺术</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;39.00</td>
+                        <td width="60px" >&yen;29.30</td>
+                        <td width="50px" ><span style="color: red">购买</span></td>
+                    </tr>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·解禁（当当网独家首发）</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;28.00</td>
+                        <td width="60px" >&yen;19.40</td>
+                        <td width="60px" ><span style="color: red">购买</span></td>
+                    </tr>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·地王之王（金融危机下房地产行...</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;32.80</td>
+                        <td width="60px" >&yen;25.10</td>
+                        <td width="60px" ><span style="color: red">购买</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="dashLine"></div>
+
+            <div id="table2">
+                <table>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·逃庄</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;36.00</td>
+                        <td width="60px" >&yen;27.70</td>
+                        <td width="50px" ><span style="color: red">购买</span></td>
+                    </tr>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·国戏（以麻将术语解读官海沉浮...</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;25.00</td>
+                        <td width="60px" >&yen;17.30</td>
+                        <td width="60px" ><span style="color: red">购买</span></td>
+                    </tr>
+                    <tr>
+                        <td width="260px"><a href="" style="text-decoration: none">·都市风水师-官场风水小说：一...</a></td>
+                        <td width="60px" style="text-decoration: line-through">&yen;39.80</td>
+                        <td width="60px" >&yen;30.50</td>
+                        <td width="60px" ><span style="color: red">购买</span></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div id="column">
+            <div id="sh">已选购以下商品</div>
+            <div class="cartbox">
+                <table id="cartTable">
+                    <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>单品积分</th>
+                        <th>市场价</th>
+                        <th>当当价</th>
+                        <th>数量</th>
+                        <th>删除</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="tr1">
+                        <td class="goods">私募（首部披露资本博弈秘密的金融...</td>
+                        <td class="point">189</td>
+                        <td class="price">&yen;32.00</td>
+                        <td class="discount">&yen;18.90(59折)</td>
+                        <td class="count" id="asd1"><input type="text" value="1" name="a" class="num"/></td>
+                        <td class="del"><input type="button" value="删除" onclick="deleteRow('tr1')"></td>
+                    </tr>
+                    <tr id="tr2">
+                        <td class="goods">小团圆（张爱玲最神秘小说遗稿）</td>
+                        <td class="point">173</td>
+                        <td class="price">&yen;28.00</td>
+                        <td class="discount">&yen;17.30(62折)</td>
+                        <td class="count"  id="asd2"><input type="text" value="1" class="num"/></td>
+                        <td class="del"><input type="button" value="删除" onclick="deleteRow('tr2')"></td>
+                    </tr>
+                    <tr id="tr3">
+                        <td class="goods">不抱怨的世界</td>
+                        <td class="point">154</td>
+                        <td class="price">&yen;24.80</td>
+                        <td class="discount">&yen;15.40(62折)</td>
+                        <td class="count" id="asd3"><input type="text" value="1" class="num"/></td>
+                        <td class="del"><input type="button" value="删除" onclick="deleteRow('tr3')"></td>
+                    </tr>
+                    <tr id="tr4">
+                        <td class="goods">风云3</td>
+                        <td class="point">80</td>
+                        <td class="price">&yen;45.00</td>
+                        <td class="discount">&yen;38.00(82折)</td>
+                        <td class="count" id="asd4"><input type="text" value="1" class="num"/></td>
+                        <td class="del"><input type="button" value="删除" onclick="deleteRow('tr4')"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id="foot">
+                    <div class="footClose" ><img src="images/shopping_balance.gif" style="cursor: pointer" onclick="getTotal()"/></div>
+                    <div class="footTotal" id="asd5">商品金额总计：&yen;<span id="priceTotal">0.00</span></div>
+                    <div id="dashLine2">
+                    </div>
+                    <div id="savePoint">
+                        <div class="footSave">您共节省金额:&yen;<span id="saveTotal">0.00</span></div>
+                        <div class="footPoint">可获商品积分:&yen;<span id="pointTotal">0.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <div id="footer">
+        <p>Copyright(C) 当当网 2004-2009，All Rights Reserved &nbsp;<img src="images/validate.gif" style="vertical-align: middle"/>&nbsp;&nbsp;京ICP证041189号 音像制品经营许可证 京音网8号</p>
+    </div>
+</body>
+</html>

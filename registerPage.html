@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/registerCss.css">
+    <script type="text/javascript">
+        var names = new Array();
+        names["北京"] =[ "朝阳","海淀","东城","西城"];
+        names["江苏"] = [ "苏州","无锡","南京","南阳"];
+        names["黑龙江"] = [ "大庆","哈尔滨","佳木斯","绥化"];
+        names["辽宁"] = [ "沈阳","大连","铁岭","锦州"];
+        function showCity(){
+            var provinceName = document.getElementById("province").value
+            var citys = document.getElementById("city");
+            citys.options.length = 0;
+            for(var key in names){
+                if(key== provinceName)
+                    for(var inkey in names[key]){
+                        citys.add(new Option(names[key][inkey],names[key][inkey])),null
+                    }
+            }
+        }
+        function test1(){
+            var email = document.getElementById("email").value;
+            if(email.indexOf('@')==-1||email.indexOf('.')==-1){
+                document.getElementById("emailMessage").innerHTML = "邮箱应该包含@和."
+            }
+            else{
+                document.getElementById("emailMessage").innerHTML="<img src = images/register_write_ok.gif>"
+            }
+        }
+        function test2() {
+            var name = document.getElementById("name").value;
+            if(name.length==0){
+                document.getElementById("userMessage").innerHTML = "用户名必须填写"
+            }
+            else if (name.length < 4 || name.length > 16) {
+                document.getElementById("userMessage").innerHTML = "用户名应该小于16位，大于4位"
+            }
+            else {
+                document.getElementById("userMessage").innerHTML = "<img src = images/register_write_ok.gif>"
+            }
+        }
+        function test3() {
+            var pwd = document.getElementById("pwd").value;
+            if(pwd.length==0){
+                document.getElementById("pwdMessage").innerHTML = "密码必须填写"
+            }
+           else if (pwd.length == 0 || pwd.length < 6) {
+                document.getElementById("pwdMessage").innerHTML = "密码不能为空并且要大于6位"
+            }
+            else {
+                document.getElementById("pwdMessage").innerHTML = " <img src = images/register_write_ok.gif>"
+            }
+        }
+        function test4(){
+           var pwd = document.getElementById("pwd").value
+            var rePwd = document.getElementById("rePwd").value
+            if (pwd!= rePwd ){
+                document.getElementById("rePwdMessage").innerHTML = "密码不一致";
+               }
+            else if(pwd= rePwd ){
+                document.getElementById("rePwdMessage").innerHTML = " <img src = images/register_write_ok.gif>";
+            }
+        }
+        function imgChange(){
+            test1();
+            test2();
+            test3();
+            test4();
+            var img = document.getElementById("btn")
+            img.setAttribute("src", "images/register_btn_out.gif")
+        }
+    </script>
+</head>
+<body>
+<div id="head">
+    <img src="images/logo.gif">
+    <ul>
+        <li class="first"><a href="dd_body.html" >首页</a></li>
+        <li class="shadow firstImg"></li>
+        <li class="show"><a href="dd_body.html">商品展示页</a></li>
+        <li class="shadow showImg"></li>
+        <li class="goods"><a href="shoppingCart.html">购物车</a></li>
+        <li class="shadow goodsImg"></li>
+        <li class="index"><a href="logoin.html">登陆</a></li>
+    </ul>
+</div>
+<div id="mid">
+     <ul class="img">
+         <li class="top"></li>
+         <li class="left"></li>
+         <li class="mid"></li>
+         <li class="right"></li>
+     </ul>
+    <ul>
+        <li class="write">填写注册信息</li>
+
+        <li class="email">邮箱验证</li>
+
+        <li class="finish">完成注册</li>
+
+    </ul>
+        <div id="mid_pic">
+            <table>
+                <tr><td rowspan="2"><img src="images/register_pic_01.gif" alt=""></td><td><img src="images/register_pic_02.gif" alt=""></td></tr>
+                <tr><td><p>您所提供的资料不会做其它用途，敬请安心填写。</p></td></tr>
+            </table>
+        </div>
+
+    <hr width="920px" style="height:1px;border:none;border-top:1px dashed ;" />
+  <div class="pic03">
+      <table style="line-height: 40px">
+          <tr>
+              <td> Email地址：</td>
+              <td> <input id="email" type="text" value=""onblur="test1()"></td>
+              <td> <div style="color: red" id = "emailMessage"></div></td>
+          </tr>
+          <tr>
+              <td>设置昵称： </td>
+              <td>  <input id="name" type="text" value=""onblur="test2()"></td>
+              <td><div style="color: red" id = "userMessage"></div> </td>
+          </tr>
+
+          <tr>
+              <td> 设定密码：</td>
+              <td> <input id="pwd" type="password" value=""onblur="test3()"></td>
+              <td><div style="color: red" id = "pwdMessage"></div></td>
+          </tr>
+
+          <tr>
+              <td>再一次输入密码：</td>
+              <td> <input id="rePwd" type="password" value=""onblur="test4()"></td>
+              <td><div style="color: red" id = "rePwdMessage"></div></td>
+          </tr>
+          <tr>
+              <td>  性别：</td>
+              <td> <input type="radio"checked="checked" value="" name="1" onblur="test4()">男<input type="radio"value=""name="1" >女</td>
+          </tr>
+
+          <tr>
+              <form action="" method="get">
+                  <input type="hidden" id="province_next" name="province_next" value="city">
+                  <input type="hidden" id="city_next" name="city_next" value="">
+                  <td> <label> 所在地区:</label></td>
+                  <td> <select id="province" onchange="showCity()">
+                      <option ></option>
+                      <option >北京</option>
+                      <option >江苏</option>
+                      <option >黑龙江</option>
+                      <option >辽宁</option>
+                      </select>
+                      <select id="city" > </select></td>
+              </form>
+          </tr>
+      </table>
+      <img id="btn" src="images/register_btn_over.gif" onclick="imgChange()">
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/dd_object_head.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/dd_body.css">
+    <script>
+        var autoIndex=1;
+        function autoChange()
+        {
+            var pic = document.getElementById("pic");
+            pic.style.backgroundImage = "url('images/dd_scroll_" + autoIndex + ".jpg')";
+            autoIndex++;
+            if (autoIndex == 7)
+            {
+                autoIndex = 1;
+            }
+        }
+        window.setInterval("autoChange()",1000);
+        function onclick1(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_2.jpg')";
+        }
+        function onclick2(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_3.jpg')";
+        }
+        function onclick3(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_4.jpg')";
+        }
+        function onclick4(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_5.jpg')";
+        }function onclick5(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_6.jpg')";
+        }
+        function onclick6(){
+            var pic=document.getElementById("pic");
+            pic.style.backgroundImage="url('images/dd_scroll_1.jpg')";
+        }
+        $(function(){
+            $("#chang_tab li").click(function(){
+                var index = $(this).index();
+                $(this).addClass("show").siblings().removeClass("show");
+                $(".history1").eq(index).addClass("con").siblings().removeClass("con");
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+            $("#menu").hide();
+            $("#menu1").click(function(){
+                $("#menu").toggle(0);
+            })
+        });
+        function openAdv(){
+            window.open("adv.html","","width=500, height=400")
+        }
+    </script>
+</head>
+<body onload="openAdv()">
+<div id="scroll">
+    <img src="images/dd_scroll.jpg" />
+    <div id="scroll_clo"><input type="button" value="关闭"></div>
+</div>
+<div id="object_head">
+    <div id="nav">
+        <div id="nav_left">
+            <p>您好！欢迎光临当当网[<a href="logoin.html">登录</a>|<a href="registerPage.html">免费注册</a>]</p>
+        </div>
+        <div id="nav_right">
+            <ul>
+                <li class="nav_right_li">帮助</li>
+                <li id="nav_right_li2">我的当当 <img src="images/dd_arrow_down.gif" alt="" id="menu1" >|
+                    <dl id="menu" style="border: 1px solid">
+                        <dt><span class="arrow"></span></dt>
+                        <dd><a href="#" style="text-decoration: none">我的订单</a></dd>
+                        <dd><a href="#" style="text-decoration: none">账户余额</a></dd>
+                        <dd><a href="#" style="text-decoration: none">购物礼券</a></dd>
+                        <dd><a href="#" style="text-decoration: none">我的会员积分</a></dd>
+                    </dl>
+                </li>
+                <li class="nav_right_li">团购|</li>
+                <li class="nav_right_li">礼品卡|</li>
+                <li class="nav_right_li">个性化推荐|</li>
+                <li id="nav_right_li1"><img src="images/dd_header_shop.gif" alt=""><a href="shoppingCart.html">&nbsp;购物车</a>|</li>
+            </ul>
+        </div>
+    </div>
+    <div id="head">
+        <div id="header1">
+            <div id="dd_tenYear"> <img src="images/dd_logo.gif" alt=""></div>
+            <div id="header1_right">
+                <ul>
+                    <li id="header1_right_li1">商店街</li>
+                    <li class="header1_right_li2">促销</li>
+                    <li class="header1_right_li3">当当<img src="images/dd_header_top.png" alt=""> </li>
+                    <li class="header1_right_li2">社区</li>
+                    <li class="header1_right_li3">在线读书</li>
+                </ul>
+            </div>
+            <div id="header1_middle">
+                <ul>
+                    <li><a href="#">首页|</a></li>
+                    <li><a href="productionpage.html">图书|</a></li>
+                    <li>音乐|</li>
+                    <li>影视|</li>
+                    <li>运动|</li>
+                    <li>服饰|</li>
+                    <li>家居|</li>
+                    <li>美妆|</li>
+                    <li>母婴|</li>
+                    <li>食品|</li>
+                    <li id="header1_middle_last">数码家电|</li>
+                </ul>
+            </div>
+        </div>
+        <div id="header2">
+            <ul>
+                <li>小说|</li>
+                <li>青春|</li>
+                <li>历史|</li>
+                <li>保健|</li>
+                <li>少儿|</li>
+                <li>旅游|</li>
+                <li>期刊|</li>
+                <li>图书畅游榜|</li>
+                <li>新书热卖网|</li>
+                <li>特价书|</li>
+                <li>图书促销|</li>
+                <li>所有图书分类|</li>
+            </ul>
+        </div>
+        <div id="header3">
+            <ul>
+                <li><input type="text"></li>
+                <li><img src="images/dd_header_search_btn.jpg" alt=""></li>
+                <li><img src="images/dd_arrow_right.gif" alt="">高级搜索|</li>
+                <li><img src="images/dd_header_search_top.jpg" alt="">雅思|</li>
+                <li>建造师|</li>
+                <li>中里巴人|</li>
+                <li>注会|</li>
+                <li>新概念英语|</li>
+                <li>更多>></li>
+            </ul>
+        </div>
+        <div id="banner">
+            <img src="images/dd_index_top_adver.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div id="container">
+        <div id="body_left">
+            <div id="body_left_top">
+                <div class="left_pink">推荐分类</div>
+                <div id="left_pink">外语|中小学教辅|</div>
+            </div>
+            <div id="body_bottom">
+                <div class="left_pink"><img src="images/dd_book_cate_icon.gif" alt="">图书商品分类</div>
+                <div class="bottom1">[小说]<br/>悬疑|言情|职场|财经<hr></div>
+                <div class="bottom1">[文艺]<br/>文学|传记|艺术|摄影<hr></div>
+                <div class="bottom1">[青春]<br/>青春文学|动漫|幽默<hr></div>
+                <div class="bottom1">[励志/成功]<br/>修养|成功|职场|沟通<hr></div>
+                <div class="bottom2">[少儿]<br/>
+                    0-2|3-6|7-10|11-14<br/>
+                    文学|科普|图画书<hr></div>
+                <div class="bottom3">[生活]<br/>
+                    保健|家教|美丽装扮|育儿|<br/>
+                    美食|旅游|收藏|生活|体育<br/>
+                    |地图|个人理财<hr></div>
+                <div class="bottom3">[个人社科]<br/>
+                    文化|历史|哲学/宗教|古籍|<br/>
+                    政治/历史|法律|经济|社会|<br/>
+                    科学|心里学<hr></div>
+                <div class="bottom1">[管理]<br/>管理|金融|营销|会计<hr></div>
+                <div class="bottom2">[科技]<br/>科普|建筑|医学|计算机|农<br/>林|自然科学|工业|通信<hr></div>
+                <div class="bottom1">[教育]<br/>教材|中小学教辅|外语<hr></div>
+                <div class="bottom2">[工具书]<br/>
+                    [图外原版书]<br/>
+                    [期刊]<hr></div>
+            </div>
+        </div>
+        <div id="body_right">
+            <div id="body_right_top">
+                <div id="right_pink"><img src="images/dd_book_mess.gif" alt="">书讯快递</div>
+                <div id="dome">
+                    <div id="dome1">
+                        <div class="right_text"><a href="#">我们台湾这些年：轰动两岸...</a></div>
+                        <div class="right_text"><a href="#">畅销教辅推荐：精品套书50...</a></div>
+                        <div class="right_text"><a href="#">2010版法律硕士联考大纲75...</a></div>
+                        <div class="right_text"><a href="#">计算机新书畅销书75折抢购</a></div>
+                        <div class="right_text"><a href="#">2009年孩子最喜欢的书</a></div>
+                        <div class="right_text"><a href="#">弗洛伊德作品精选集59折</a></div>
+                        <div class="right_text"><a href="#">2010考研英语大纲到货75折...</a></div>
+                        <div class="right_text"><a href="#">权威定本四大名著（人民文...</a></div>
+                        <div class="right_text"><a href="#">口述历史权威唐德刚先生国...</a></div>
+                        <div class="right_text"><a href="#">袁伟民与体坛风云：实话实...</a></div>
+                        <div class="right_text"><a href="#">我们台湾这些年：轰动两岸...</a></div>
+                        <div class="right_text"><a href="#">畅销教辅推荐：精品套书50...</a></div>
+                        <div class="right_text"><a href="#">2010版法律硕士联考大纲75...</a></div>
+                        <div class="right_text"><a href="#">计算机新书畅销书75折抢购</a></div>
+                        <div class="right_text"><a href="#">2009年孩子最喜欢的书</a></div>
+                        <div class="right_text"><a href="#">弗洛伊德作品精选集59折</a></div>
+                        <div class="right_text"><a href="#">2010考研英语大纲到货75折...</a></div>
+                        <div class="right_text"><a href="#">权威定本四大名著（人民文...</a></div>
+                        <div class="right_text"><a href="#">口述历史权威唐德刚先生国...</a></div>
+                        <div class="right_text"><a href="#">袁伟民与体坛风云：实话实...</a></div>
+                    </div>
+                    <div id="dome2"></div>
+                </div>
+                <script>
+                    var dome=document.getElementById("dome");
+                    var dome1=document.getElementById("dome1");
+                    var dome2=document.getElementById("dome2");
+                    var speed=50; //设置向上滚动速度
+                    dome2.innerHTML=dome1.innerHTML;//复制dome1为dome2
+                    function moveTop(){
+                        if(dome2.offsetTop-dome.scrollTop<=0) //当滚动至dome1与dome2交界时
+                            dome.scrollTop-=dome1.offsetHeight;//dome跳到最顶端
+                        else{
+                            dome.scrollTop++
+                        }
+                    }
+                    var MyMar=setInterval(moveTop,speed); //设置定时器
+                    dome.onmouseover=function() {clearInterval(MyMar)}; //鼠标移上时清除定时器达到滚动停止的 目的
+                    dome.onmouseout=function() {MyMar=setInterval(moveTop,speed)}; //鼠标移开时重设定时器，继 续滚动
+                </script>
+
+
+                <div class="right_img"><img src="images/dd_book_right_adver1.jpg" alt=""></div>
+                <div class="right_img"><img src="images/dd_book_right_adver2.gif" alt=""></div>
+
+            </div>
+            <div id="body_right_bottom">
+                <div id="right_green">近七日畅销榜 <img src="images/dd_bang.gif" alt=""></div>
+                <div id="body_right_nav">
+                    <ul>
+                        <li>动漫</li>
+                        <li>小说</li>
+                        <li>外语</li>
+                        <li>旅游</li>
+                        <li>励志</li>
+                    </ul>
+                </div>
+                <div class="right_info">
+                   <table>
+                       <tr><td   class="rank_logo" rowspan="4"><img src="images/dd_book_no_01.gif" alt=""></td><td   class="rank_logo" rowspan="4"><img src="images/dd_seven_hearten_01.jpg" alt=""></td><td class="table_blue">不抱怨的世界</td></tr>
+                       <tr><td>作者：（美）鲍温</td></tr>
+                       <tr><td>出版社：陕西师范</td></tr>
+                       <tr><td> 出版时间：2009年4月</td></tr>
+                   </table>
+                </div>
+                <div class="right_info">
+                    <table>
+                        <tr><td  class="rank_logo" rowspan="4"><img src="images/dd_book_no_02.gif" alt=""></td><td   class="rank_logo" rowspan="4"><img src="images/dd_seven_hearten_02.jpg" alt=""></td><td class="table_blue">遇见未知的自己</td></tr>
+                        <tr><td>作者：张德芬</td></tr>
+                        <tr><td>出版社：华夏出版</td></tr>
+                        <tr><td> 出版时间：2008年1月</td></tr>
+                    </table>
+                </div>
+                <div class="right_info">
+                    <table>
+                        <tr><td   class="rank_logo" rowspan="4"><img src="images/dd_book_no_03.gif" alt=""></td><td  class="rank_logo" rowspan="4"><img src="images/dd_seven_hearten_03.jpg" alt=""></td><td class="table_blue">活法</td></tr>
+                        <tr><td>作者：（日）稻盛</td></tr>
+                        <tr><td>出版社：陕西师范</td></tr>
+                        <tr><td> 出版时间：2005年3月</td></tr>
+                    </table>
+                </div>
+                <div class="right_bottom_nav"><img src="images/dd_book_no_04.gif" alt=""><span>高效人士的七个习惯</span></div>
+                <div class="right_bottom_nav"><img src="images/dd_book_no_05.gif" alt=""><span>被迫强大</span></div>
+                <div class="right_bottom_nav"><img src="images/dd_book_no_06.gif" alt=""><span>遇见心想事成的自己</span></div>
+                <div class="right_bottom_nav"><img src="images/dd_book_no_07.gif" alt=""><span>世界上最伟大的推销员</span></div>
+                <div class="right_bottom_nav"><img src="images/dd_book_no_08.gif" alt=""><span>我的成功可以复制</span></div>
+            </div>
+        </div>
+        <div id="body_middle">
+               <div id="change_img">
+                    <div id="change_img_top">
+                        <img src="images/dd_scroll_top.gif" alt="">
+                    </div>
+                    <div id="change_img_middle">
+                         <div id="pic"></div>
+                         <div id="change_img_btn">
+                            <input type="button" onclick="onclick1()" value="1">
+                            <input type="button" onclick="onclick2()" value="2">
+                            <input type="button" onclick="onclick3()" value="3">
+                            <input type="button" onclick="onclick4()" value="4">
+                            <input type="button" onclick="onclick5()" value="5">
+                            <input type="button" onclick="onclick6()" value="6">
+                         </div>
+                    </div>
+                    <div id="change_img_bottom"></div>
+               </div>
+               <div id="chang_tab">
+                       <h1>最新上架</h1>
+                       <ul >
+                           <li class="show history">历史</li>
+                           <li class="show home">家教</li>
+                           <li class="show culture">文化</li>
+                           <li class="show novel">小说</li>
+                       </ul>
+
+                       <div class="history1 con">
+
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_history_1.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">《中国时代》（上）</a></p>
+                                   作者：师永刚,邹明  主编<br/>
+                                   出版社：作家出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥24.80 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_history_2.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">中国历史的屈辱.</a></p>
+                                   作者：王重旭  著.<br/>
+                                   出版社：华夏出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥21.60 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_history_3.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">《中国时代》（下）</a></p>
+                                   作者：师永刚,邹明  主编<br/>
+                                   出版社：作家出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥38.00<br/>
+                                   当当价：￥27.40 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_history_4.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">大家国学十六讲</a></p>
+                                   作者：张萌麟，吕思勉  著<br/>
+                                   出版社：中国友谊出版社<br/>
+                                   <span>出版时间：2013年09月</span><br/>
+                                   定价：￥48.00<br/>
+                                   当当价：￥34.60 </dd>
+                           </dl>
+                       </div>
+                       <div class="history1">
+
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_family_1.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">嘿 我知道你</a></p>
+                                   作者：蓝海　著<br/>
+                                   出版社：长江文艺出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥24.80 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_family_2.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">择业要趁早.</a></p>
+                                   作者：（美）列文<br/>
+                                   出版社：湖南人民出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥21.60 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_family_3.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">爷爷奶奶的孙子兵法</a></p>
+                                   作者：伏健全 著<br/>
+                                   出版社：中信出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥38.00<br/>
+                                   当当价：￥27.40 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_family_4.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">一分钟读懂孩子心里</a></p>
+                                   作者：海韵 著<br/>
+                                   出版社：中国民族摄影艺术出...<br/>
+                                   <span>出版时间：2013年09月</span><br/>
+                                   定价：￥48.00<br/>
+                                   当当价：￥34.60 </dd>
+                           </dl>
+                       </div>
+                       <div class="history1">
+
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_culture_1.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">且以永日（安妮宝贝首...</a></p>
+                                   作者：安妮宝贝　著<br/>
+                                   出版社：长江文艺出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥24.80 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_culture_2.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">所有人问所有人（韩寒...</a></p>
+                                   作者：韩寒 监制,「一个」工...<br/>
+                                   出版社：湖南人民出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥21.60 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_culture_3.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">因为有你，所以参差：...</a></p>
+                                   作者：王森 著<br/>
+                                   出版社：中信出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥38.00<br/>
+                                   当当价：￥27.40 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_culture_4.jpg" /></a></dt>
+                               <dd>
+                                   <p><a href="#">《薄荷日记》（2013夏...</a></p>
+                                   作者：杨昌溢 著<br/>
+                                   出版社：中国民族摄影艺术出...<br/>
+                                   <span>出版时间：2013年09月</span><br/>
+                                   定价：￥48.00<br/>
+                                   当当价：￥34.60 </dd>
+                           </dl>
+                       </div>
+
+                       <div class="history1">
+
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_novel_1.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">且以永日（安妮宝贝首...</a></p>
+                                   作者：安妮宝贝　著<br/>
+                                   出版社：长江文艺出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥24.80 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_novel_2.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">所有人问所有人（韩寒...</a></p>
+                                   作者：韩寒 监制,「一个」工...<br/>
+                                   出版社：湖南人民出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥36.00<br/>
+                                   当当价：￥21.60 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_novel_3.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">因为有你，所以参差：...</a></p>
+                                   作者：王森 著<br/>
+                                   出版社：中信出版社<br/>
+                                   <span>出版时间：2013年08月</span><br/>
+                                   定价：￥38.00<br/>
+                                   当当价：￥27.40 </dd>
+                           </dl>
+                           <dl>
+                               <dt><a href="#"><img src="tab/dd_novel_4.jpg"  /></a></dt>
+                               <dd>
+                                   <p><a href="#">《薄荷日记》（2013夏...</a></p>
+                                   作者：杨昌溢 著<br/>
+                                   出版社：中国民族摄影艺术出...<br/>
+                                   <span>出版时间：2013年09月</span><br/>
+                                   定价：￥48.00<br/>
+                                   当当价：￥34.60 </dd>
+                           </dl>
+                       </div>
+                   </div>
+               <div id="middle_info">
+                   <h1>重点关注</h1>
+                   <table>
+                       <tr>
+                           <td><img src="images/dd_focus_1.jpg" /></td>
+                           <td><img src="images/dd_focus_2.jpg" /></td>
+                           <td><img src="images/dd_focus_3.jpg" /></td>
+                           <td><img src="images/dd_focus_4.jpg" /></td>
+                       </tr>
+                       <tr>
+                           <td>郑玉巧育儿经-幼儿卷</td>
+                           <td>蹦蹦跳跳的故事</td>
+                           <td>人体自有大药</td>
+                           <td>特效穴位使用手册</td>
+                       </tr>
+                       <tr>
+                           <td>定价：&yen;49.80</td>
+                           <td>定价：&yen;50.00</td>
+                           <td>定价：&yen;29.00</td>
+                           <td>定价：&yen;29.00</td>
+                       </tr>
+                       <tr>
+                           <td>当当价：&yen;32,00</td>
+                           <td>当当价：&yen;33.00</td>
+                           <td>当当价：&yen;19.40</td>
+                           <td>当当价：&yen;19.40</td>
+                       </tr>
+                       <tr>
+                           <td><img src="images/dd_focus_5.jpg" /></td>
+                           <td><img src="images/dd_focus_6.jpg" /></td>
+                           <td><img src="images/dd_focus_7.jpg" /></td>
+                           <td><img src="images/dd_focus_8.jpg" /></td>
+                       </tr>
+                       <tr>
+                           <td>猫武士系列</td>
+                           <td>求医不如求已</td>
+                           <td>雅思词汇词根</td>
+                           <td>等待nemo的日子</td>
+                       </tr>
+                       <tr>
+                           <td>定价：&yen;120.00</td>
+                           <td>定价：&yen;198.00</td>
+                           <td>定价：&yen;28.00</td>
+                           <td>定价：&yen;26.00</td>
+                       </tr>
+                       <tr>
+                           <td>当当价：&yen;79,20</td>
+                           <td>当当价：&yen;116.90</td>
+                           <td>当当价：&yen;18.70</td>
+                           <td>当当价：&yen;17.90</td>
+                       </tr>
+                   </table>
+               </div>
+        </div>
+</div>
+<div id="footer" style="margin: 0px auto;text-align: center" >
+    <br/>
+    <p style="color: brown">公司简介 | 诚征英才 | 网站联盟 | 百货招商 | 交易条款</p>
+    <p>Copyright(C) 当当网 2004-2009，All Rights Reserved &nbsp;<img src="images/validate.gif" style="vertical-align: middle"/>&nbsp;&nbsp;京ICP证041189号 音像制品经营许可证 京音网8号</p>
+</div>
+</body>
+</html>

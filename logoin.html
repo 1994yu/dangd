@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.0.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#email").focus(function(){
+                $(this).removeClass().addClass("login_content_input login_content_input_Focus");
+            }).blur(function(){
+                $(this).removeClass().addClass("login_content_input");
+            });
+            $("#pwd").focus(function(){
+                $(this).removeClass().addClass("login_content_input login_content_input_Focus");
+            }).blur(function(){
+                $(this).removeClass().addClass("login_content_input");
+            });
+            $(".form1").submit(function(){
+                var email=$("#email").val();
+                var pwd=$("#pwd").val();
+                if(email==""){
+                    alert("请输入Email地址或昵称");
+                    return false;
+                }
+                if(pwd==""){
+                    alert("请输入密码");
+                    return false;
+                }
+                return true;
+            })
+            $("#btn").mouseover(function(){
+                $(this).removeClass().addClass("login_btn_over");
+            }).mouseout(function(){
+                $(this).removeClass().addClass("login_btn_out");
+            });
+            $("#quick").mouseover(function(){
+                $(this).removeClass().addClass("login_register_over");
+            }).mouseout(function(){
+                $(this).removeClass().addClass("login_register_out");
+            }).click(function(){
+                window.location.href="registerPage.html";
+            });
+        });
+    </script>
+    <style type="text/css">
+        div#header{width:960px;
+            margin: 0px auto;}
+        #body{
+            width:960px;
+            margin: 0px auto;
+        }
+        div.footer {border: solid 1px;;clear:both;text-align:center;}
+        ul{
+            text-align: right;
+        }
+        li{
+            display: inline;
+        }
+        #pic4{
+            float: left;
+        }
+        #picLeft{
+            float:left;
+        }
+
+        #mydiv{
+            border: solid 1px;;
+            width: 260px;
+            height: 280px;
+            float: left;
+        }
+        .content{
+            border: 0px solid cornflowerblue;
+            margin-top: 10px;
+            width: 580px;
+            vertical-align: middle;
+            -webkit-column-rule-width: 10px;
+            -webkit-column-count: 3;
+            -webkit-column-gap: 20px;
+            -webkit-column-rule: 1px dashed red;
+        }
+        .login{
+            margin:0px ;
+        }
+        .login dt{
+            color:#519403;
+            font-weight:bold;
+        }
+        .login dd{
+            color:#666666;
+            line-height:25px;
+        }
+        span{
+            padding: 0px 45px;
+        }
+        #btn{
+            position:relative;
+            left : 130px;
+        }
+        #quick{
+            position: relative;
+            left:100px;
+            top: 20px;;
+        }
+        #lable1{
+            background: lightgoldenrodyellow;
+        }
+        #h11{
+            color: coral;
+            text-align: center;
+            position: relative;
+            top: 5px;;
+        }
+        .login_btn_out{
+            background-image:url(images/login_icon_bg_01.gif);
+            background-position:0px -30px;
+            background-repeat:no-repeat;
+            width:77px;
+            height:26px;
+            border:0px;
+            cursor:pointer;
+        }
+        .login_btn_over{
+            background-image:url(images/login_icon_bg_01.gif);
+            background-position:-78px -30px;
+            background-repeat:no-repeat;
+            width:77px;
+            height:26px;
+            border:0px;
+            cursor:pointer;
+        }
+        .login_register_out{
+            background-image:url(images/login_icon_bg_01.gif);
+            background-position:0px -3px;
+            background-repeat:no-repeat;
+            width:144px;
+            height:26px;
+            border:0px;
+            cursor:pointer;
+        }
+        .login_register_over{
+            background-image:url(images/login_icon_bg_01.gif);
+            background-position:-144px -3px;
+            background-repeat:no-repeat;
+            width:144px;
+            height:26px;
+            border:0px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <img src="images/logo.gif"/>
+    <img src="images/login_header.gif" />
+    <ul>
+        <li >
+            <a href="dd_body.html">首页|</a>
+        </li>
+        <li>
+            <a href="#">商品展示区|</a>
+        </li>
+        <li>
+            <a href="#">购物车|</a>
+        </li>
+        <li>
+            <a href="registerPage.html">注册</a>
+        </li>
+    </ul>
+</div>
+<div id="body">
+        <div id="picLeft"> <img src="images/login_main_01.jpg" />
+            <img src="images/login_main_02.jpg"/>
+            <img src="images/login_main_03.jpg" />
+            <div class="content">
+                <div>
+                    <dl class="login">
+                        <dt>&nbsp&nbsp&nbsp更多选择、更低价格</dt>
+                        <dd>100万种商品包含图书、数码、美妆、运动健康等，价格低于地面店20%以上</dd>&nbsp&nbsp&nbsp
+                    </dl>
+                </div>
+
+                <div>
+                    <dl class="login">
+                        <dt>&nbsp&nbsp&nbsp全场免运费、货到付款</dt>
+                        <dd>免费送货上门、360个城市货到付款。另有网上支付、邮局汇款等多种支付方式</dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl class="login">
+                        <dt>&nbsp&nbsp&nbsp真实、优质的商品评论</dt>
+                        <dd>千万用户真实、优质的商品评论，给您多角度、全方位的购物参考</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    <div id="mydiv">
+        <div id="h11"> 请登录当当网<hr color="orange"></div>
+        <form class="form1" >
+            <dl>
+                <dd>Email地址或昵称:<input id="email" type="text" class="login_content_input" style="width:80px";></dd>
+            </dl>
+            <dl>
+                <dd><span>密码:</span><input id="pwd" type="password" class="login_content_input" style="width:80px"></dd>
+            </dl>
+            <dl>
+                <dd><input id="btn" class="login_btn_out" type="submit" value=""></dd>
+            </dl>
+        </form>
+        <div id="lable1">
+            <label>还不是当当网用户</label>快捷方便的免费注册，让你立刻尽享当当网提供的条项优惠服务......
+        </div>
+        <div >
+            <input id="quick" type="button" class="login_register_out" value="" >
+        </div>
+    </div>
+       <div id="pic4">
+        <img src="images/login_main_04.jpg"/>
+       </div>
+</div>
+</div>
+    <div class="footer">Copyright (C) 当当网 2004-2009, All Rights Reserved  <img src="images/validate.gif"  alt="版权" style="vertical-align:middle;" /> 京ICP证041189号 音像制品经营许可证 京音网8号</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+*{  margin: 0px;  padding: 0px;  }
+#object_head{  width: 960px;  height: 280px;  margin: 0px auto;  }
+#nav{  width: 960px;  height: 30px;  background-color: #eee;  margin: 0px  auto 20px auto;  font-weight: 500;  font-size:12px ;  }
+#nav_left p{  width: 280px;  float: left;  line-height: 30px;  padding-left: 10px;  }
+a{  color: black; }
+ul{  list-style: none;  }
+#nav_right li{  text-align: center;  line-height: 15px;  display: inline-block;  float: right;  margin: 5px 5px 5px 0px ;  }
+.nav_right_li{  padding-top: 5px;  }
+#nav_right_li1{  vertical-align: middle;  }
+#nav_right_li2{  padding-top: 3px;  }
+#head{  width: 960px;  margin: 0px auto;  }
+#header1{  height: 50px;  border:  solid 1px white;  }
+#header1 #dd_tenYear{  width: 130px;  height: 50px;  float: left;  }
+#header1 #header1_right{  width: 300px;  float: right;  margin-top: 22px;  }
+#header1 #header1_right li{  text-align: center;  display: inline-block;  font-weight: 500;  font-size: 14px;  padding: 5px;  }
+#header1 #header1_right_li1{  background-image:url("../images/dd_header_1_a.jpg");  width: 42px;  }
+#header1 .header1_right_li2{  background-image: url("../images/dd_header_2_a.jpg");  width: 29px;  }
+#header1 .header1_right_li3{  background-image: url("../images/dd_header_3_a.jpg");  }
+#header1 #header1_middle{  width: 450px; height: 30px;  margin-left: 130px;  margin-right: 180px;  margin-top: 25px;  padding-top: 3px;  background:#eee ;border: solid 1px  }
+#header1 #header1_middle li {  display: inline-block;  font-weight: 500;  font-size: 12px;  }
+#header2{  height: 25px;  background-color: #F9751A;  margin-bottom: 5px;  padding-left: 150px;  }
+#header2 li{  text-align: center;  line-height: 15px;  display: inline-block;  margin: 5px 0px  ;  color: white;  font-weight: 500;  font-size: 13px;  }
+#header3{  height: 35px;  background-color: #eee;  padding-left: 30px;  }
+#header3 li {  text-align: center;  line-height: 30px;  display: inline-block;  margin: 5px 0px;  font-weight: 500;  font-size: 13px;  }
+#header3 li input{  height: 20px;  position: relative;  bottom: 5px;  }
+#banner{  margin: 20px auto;  width: 960px;  }

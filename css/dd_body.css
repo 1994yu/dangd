@@ -1,0 +1,38 @@
+#dome{  overflow:hidden; /*溢出的部分不显示*/  height:200px;  padding:5px;  width: 170px;  }
+#container{  width: 960px;  margin: 0px auto;  }
+#body_left{  font-weight: 600;  font-size: 13px;  float: left;}
+#body_left_top{  width: 190px;  height: 50px;  margin-bottom: 10px;    border: solid 1px;  }
+.left_pink{  width: 190px;  height: 25px;  background-color: #FEEDD0;  line-height: 25px;   color: #86565C;  text-indent: 10px;}
+#left_pink{  text-indent: 15px;}
+#body_bottom{  width: 190px;    border: solid 1px; text-align:center; }
+.bottom1{  width: 190px;  height: 60px;  line-height: 30px; }
+.bottom2{  width: 190px;  height: 90px;  line-height: 30px;}
+.bottom3{  width: 190px;  height: 110px;  line-height: 25px;}
+#body_right{  float: right;  }
+#body_right_top{  font-weight: 600;  font-size: 13px;  border: solid 1px;  }
+#right_pink{  width: 200px;  height: 25px;  background-color: #FEEDD0;  line-height: 25px;  color: #86565C;  }
+.right_text{  width: 200px;  height: 30px;  border-bottom: 1px dashed #000;  }
+.right_text a{color: #000}
+.right_img{  width: 200px;  height: 110px;  margin-top: 10px;  }
+.right_img img{width: 200px}
+#right_green{  width: 200px;  height: 25px;  background-color: #417701;  line-height: 25px;  padding-bottom: 5px;  font-weight: 600;  color: white;  }
+#body_right_nav{  width: 200px;  height: 19px;  }
+#body_right_nav ul{  list-style: none; /*border: solid 1px white;*/  margin-top: 0px;  }
+#body_right_nav li{  display: inline-block;  line-height: 20px;  float: right;  font-size: 10px;  margin-left:3px;  background-image: url("../images/dd_seven_bg1.jpg");  }
+.right_info{  width: 200px;  height: 90px;  background-color: #eee;  }
+#body_right table{  width: 200px;  height: 88px;  font-size: 12px;  }
+.table_blue{color: blue}
+.rank_logo{  vertical-align: top;  }
+.right_bottom_nav{  width: 200px;  height: 20px;  font-weight: 500;  font-size: 12px;  color: blue;  }
+.right_bottom_nav span{  margin-left: 15px;  }
+#body_middle{  margin-left: 200px;  }
+#change_img{  width: 550px;  height: 250px;  margin-bottom: 10px;  }
+#change_img_top img{  width: 550px;  height: 50px;  margin: 0px;  }
+#change_img_middle{  background:#EFEFF0 ;  margin: 0px;  }
+#pic{  width: 500px;  height: 170px;  background-image: url("../images/dd_scroll_1.jpg");  }
+#chang_tab{  width: 550px;  height: 320px;  border: solid 1px;  font-size:14px;  margin-bottom: 10px;  }
+#middle_info{  width: 550px;  height: 420px;  border: solid 1px;  }
+#body_middle table{  font-size: 15px;  width: 550px;  height: 390px;  }
+#body_middle table tr{  padding: 10px;  }
+#scroll{  position: fixed;  top: 20px;  left:1200px;  z-index:1 ;  }
+#scroll_clo{  position: absolute;  left: 60px;  top: 0px;  float: right;  z-index:2;  }

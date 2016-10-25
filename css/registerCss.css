@@ -1,0 +1,29 @@
+#head{background-image: url("../images/register_head_bg.gif");  width: 952px;  height: 50px;  margin: auto;  }
+#head img{  position: relative;  left: 30px;  top: 10px;  }
+#head ul{  list-style: none;  position: relative;  left:620px;  top: -30px;  }
+#head ul li{  float: left  }
+#head ul a{  text-decoration: none;  }
+#mid { /*border: 1px solid;*/  width: 948px;  height: 765px;  margin: auto;  position: relative;  top: 30px;  }
+#mid ul{  list-style: none;  }
+#mid ul li{  float: left;  }
+#mid hr{  position: relative;  top: 20px;  }
+#mid p{  font-size: 13px;  color: red;  }
+#mid_pic{ margin-left: 150px}
+.pic03{  position: relative;  left: 100px;  top: 40px;  }
+.img{  list-style: none;  }
+.top{  background: url("../images/register_top_bg.gif");  width: 950px;  height: 5px;  position: relative;  left: -41px;  top: -30px;  }
+.left{  background: url("../images/register_tag_left.gif");  width: 313px;  height: 32px;  position: relative;  left: -40px;  top: -30px;  }
+.mid{  background-image: url("../images/register_tag_mid.gif");  width: 319px;  height: 32px;  position: relative;  left: -40px;  top: -30px;  }
+.right{  background-image: url("../images/register_tag_right.gif");  width: 316px;  height: 32px;  position: relative;  left: 591px;  top: -61px;  }
+.write{  width: 200px;  height: 20px;  line-height: 20px; position: relative;  left: -260px;  top: -55px;  }
+.email{  width: 200px;  height: 20px;  line-height: 20px;  position: relative;  left: -120px;  top: -55px;  }
+.finish{  width: 200px;  height: 20px;  line-height: 20px;  position: relative;  left: 400px;  top: -75px;  }
+.shadow{  background: url("../images/register_cont.gif");  }
+.first{  width: 40px;  height: 20px;  line-height: 20px;  }
+.firstImg{  width: 2px;  height: 10px;  line-height: 10px;  position: relative;  left: -4px;  top: 4px;  }
+.show{  width: 100px;  height: 20px;  line-height: 20px;  }
+.showImg{  width: 2px;  height: 10px;  line-height: 10px;  position: relative;  left: -8px;  top: 4px;  }
+.goods{  width: 60px;  height: 20px;  line-height: 20px;  }
+.goodsImg{  width: 2px;  height: 10px;  line-height: 10px;  position: relative;  left: -4px;  top: 4px;  }
+.index{  width: 40px;  height: 20px;  line-height: 20px;  }
+#btn{  position: relative;  left: 60px;  top: 10px;  }
